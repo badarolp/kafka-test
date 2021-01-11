@@ -8,8 +8,6 @@ const kafka = new Kafka({
 const topic = 'test'
 const consumer = kafka.consumer({ groupId: 'kafka-testing' })
 
-const producer = kafka.producer();
-
 async function run() {
   await consumer.connect()
   await consumer.subscribe({ topic })
